@@ -1,13 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Staatliches&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
+.container {
+  margin: 2em 0em;
+  padding: 4em 2em;
+  width: 60%;
+  background-color: white;
+  text-align: center;
+}
+
+.container .person-img {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+}
+
+.container .person-img::after {
+  position: absolute;
+  content: '';
+  width: 150px;
+  height: 150px;
+  font: 2em;
+  border-radius: 50%;
+  top: -5%;
+  right: -5%;
+  background-color: #85C1E9;
+}
+
+.container #person {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.container #cite {
+  position: absolute;
+  padding: 1em;
+  top: 15%;
+  left: -15%;
+  background-color: #85C1E9;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.container h3 {
+  padding: 1em 0em 0.25em 0em;
+}
+
+.container span {
+  color: #85C1E9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.container p {
+  padding: 2em;
+}
+
+.container .arrows i {
+  padding: 0px 6px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.container .arrows i:hover {
+  color: #85C1E9;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F08080;
+}
+
+.app h2 {
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Staatliches', cursive;
+  font-size: 2.5rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: .5em 0em;
+  letter-spacing: 2px;
+}
+
+.app h2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0%;
+  background: white;
+  -webkit-transform: scaleX(0.35);
+          transform: scaleX(0.35);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.app h2:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/*# sourceMappingURL=index.css.map */

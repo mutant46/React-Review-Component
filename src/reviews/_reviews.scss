@@ -1,0 +1,66 @@
+.container {
+    margin: 2em 0em;
+    padding: 4em 2em;
+    width: 60%;
+    background-color: white;
+    text-align: center;
+    .person-img {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 150px;
+            height: 150px;
+            font: 2em;
+            border-radius: 50%;
+            top: -5%;
+            right: -5%;
+            background-color: #85C1E9;
+        }
+    }
+    #person {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+    }
+    #cite {
+        position: absolute;
+        padding: 1em;
+        top: 15%;
+        left: -15%;
+        background-color: #85C1E9;
+        border-radius: 50%;
+        z-index: 2;
+    }
+    h3 {
+        padding: 1em 0em 0.25em 0em;
+    }
+    span {
+        color: #85C1E9;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    p {
+        padding: 2em;
+    }
+    .arrows i {
+        padding: 0px 6px;
+        font-size: 22px;
+        cursor: pointer;
+        &:hover {
+            color: #85C1E9;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
